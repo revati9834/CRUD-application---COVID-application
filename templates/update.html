@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container py-3">
+    <div class="row">
+        <div class="mx-auto col-sm-6">
+                    <!-- form user info -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="mb-0">Edit Slot Information</h3>
+                        </div>
+                        <br>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" method="POST" action="/action3">
+                                {% for user in users %}
+                                
+                                <input type="text" name="_id" value="{{ user['_id'] }}" hidden> 
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">VaccineCenterName</label>
+                                    <div class="col-lg-9">
+                                        <input name="VaccineCenterName" class="form-control" type="text" value="{{ user['VaccineCenterName'] }}" placeholder="{{ user['VaccineCenterName'] }}" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">VaccineName</label>
+                                    <div class="col-lg-9">
+                                        <input name="VaccineName" class="form-control" type="VaccineName" value="{{ user['VaccineName'] }}" placeholder="{{ user['VaccineName'] }}" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Availability</label>
+                                    <div class="col-lg-9">
+                                        <input name="Availability" class="form-control" type="text" value="{{ user['Availability'] }}" placeholder="{{ user['Availability'] }}" autocomplete="off" required>
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Age</label>
+                                    <div class="col-lg-9">
+                                        <input name="Age" class="form-control" type="text" value="{{ user['Age'] }}" placeholder="{{ user['Age'] }}" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Website</label>
+                                    <div class="col-lg-9">
+                                        <input name="Website" class="form-control" type="url" value="{{ user['Website'] }}" placeholder="{{ user['Website'] }}" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label"></label>
+                                    <div class="col-lg-9">
+                                        <input type="submit" class="btn btn-success btn-md" value="Save Changes">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form user info -->
+        </div>
+    </div>
+</div>
+{% endblock %}
