@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Covid Vaccination</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      margin: 8px;
+      padding: 10px;
+      border: 8px inset black;
+      border-radius: 15px;
+      background-color: lightgray;
+    }
+
+    th, td {
+      border-bottom: 1px solid #ddd;
+    }
+    td{
+      background-color: white;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+      }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid" >
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/home" style="color: white;">COVID VACCINATION</a>
+    </div>
+    <ul class="nav navbar-nav" >
+      <li class="{{ status_info }}" ><a href="/">Add slots</a></li>
+      <li class="{{ status_list }}" ><a href="/list" >View Slots</a></li>
+    </ul>
+  </div>
+</nav>
+  
+          {% block content %}
+          {% endblock %}
+          <div class="footer" style=" position: fixed;left: 0;bottom: 0;width: 100%;background-color:darkslategray;height: 10px;">
+          </div>
+    </body>
+</html>
