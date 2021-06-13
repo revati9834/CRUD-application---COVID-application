@@ -1,6 +1,6 @@
 
 
-#     ASS8 MongoDb crud Application
+#      MongoDb crud Application
 
 # For flask implementation  
 from flask import Flask, render_template,request,redirect,url_for 
