@@ -1,1 +1,3 @@
-# CRUD-application : COVID-application
+# Vaccine Slot Management
+
+CRUD application with python and MongoDB
